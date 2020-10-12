@@ -6,8 +6,20 @@ import datetime as dt
 class Location(models.Model):
     name = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.name
+
+    def save_location(self):
+        self.save()
+
 class categories(models.Model):
     name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+    def save_category(self):
+        self.save()
 
 class Photos(models.Model):
     image = models.ImageField(upload_to = 'photos/', null = True)
@@ -17,7 +29,8 @@ class Photos(models.Model):
     category = models.ManyToManyField(categories)
     time_uloaded = models.DateTimeField(auto_now_add=True, null=True)
 
-
+    def save_image(self):
+        self.save()
 
 
 
