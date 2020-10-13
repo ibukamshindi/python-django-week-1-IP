@@ -12,6 +12,9 @@ class Location(models.Model):
     def save_location(self):
         self.save()
 
+    def delete_location(self):
+        self.delete()
+
 class categories(models.Model):
     name = models.CharField(max_length=30)
 
@@ -20,6 +23,9 @@ class categories(models.Model):
 
     def save_category(self):
         self.save()
+
+    def delete_category(self):
+        self.delete()    
 
 class Photos(models.Model):
     image = models.ImageField(upload_to = 'photos/', null = True)
@@ -36,5 +42,8 @@ class Photos(models.Model):
     def search_by_title(cls, search_term):
         gallery = cls.objects.filter(descripton__icontains=search_term)
         return gallery
+
+    def delete_image(self):
+        self.delete()
 
 
