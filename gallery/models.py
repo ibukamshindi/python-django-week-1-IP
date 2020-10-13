@@ -32,5 +32,9 @@ class Photos(models.Model):
     def save_image(self):
         self.save()
 
+    @classmethod
+    def search_by_title(cls, search_term):
+        gallery = cls.objects.filter(descripton__icontains=search_term)
+        return gallery
 
 
