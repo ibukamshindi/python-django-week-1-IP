@@ -1,5 +1,5 @@
 {% load bootstrap3 %}
-{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +13,8 @@
 
   {% block styles %}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+       
   {% endblock %}
-  <link rel="stylesheet" href="{% static 'css/photo.css' %}">
-  <link rel="stylesheet" href="{% static 'css/search.css' %}">
-
 </head>
 <body>
   {% include "navbar.html" %}
