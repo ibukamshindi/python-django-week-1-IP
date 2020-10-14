@@ -27,7 +27,7 @@ SECRET_KEY = '=_mkv!h3@f=!c%$!dcx%qgn#+3c)n5gd_n1jr$(tm3kh@&lb^6'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS ='.localhost','.herokuapp.com','.127.0.0.1'
 
