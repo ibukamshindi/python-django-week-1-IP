@@ -38,12 +38,12 @@ class Photos(models.Model):
     def save_image(self):
         self.save()
 
+    def delete_image(self):
+        self.delete()
+
     @classmethod
     def search_by_title(cls, search_term):
         gallery = cls.objects.filter(descripton__icontains=search_term)
         return gallery
-
-    def delete_image(self):
-        self.delete()
 
 
